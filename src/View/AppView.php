@@ -13,7 +13,8 @@
  */
 namespace App\View;
 
-use Cake\View\View;
+// use Cake\View\View;
+use WyriHaximus\TwigView\View\TwigView;
 
 /**
  * Application View
@@ -22,7 +23,7 @@ use Cake\View\View;
  *
  * @link https://book.cakephp.org/3.0/en/views.html#the-app-view
  */
-class AppView extends View
+class AppView extends TwigView
 {
 
     /**
