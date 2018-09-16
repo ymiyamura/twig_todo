@@ -1,0 +1,18 @@
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <li class="heading">{{ __('Actions') }}</li>
+        <li>{{ Html.link(__('List Todos'), {'action' : 'index'})|raw }}</li>
+    </ul>
+</nav>
+<div class="todos form large-9 medium-8 columns content">
+    {{ Form.create(todo)|raw }}
+    <fieldset>
+        <legend>{{ __('Add Todo') }}</legend>
+        {{ Form.input('title')|raw }}
+        {{ Form.input('descriptions')|raw }}
+        {{ Form.input('status')|raw }}
+        {{ Form.input('done', {'empty' : true})|raw }}
+    </fieldset>
+    {{ Form.button(__('Submit'))|raw }}
+    {{ Form.end()|raw }}
+</div>

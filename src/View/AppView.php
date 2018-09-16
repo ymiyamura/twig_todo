@@ -35,7 +35,7 @@ class AppView extends TwigView
      *
      * @return void
      */
-    public function initialize()
-    {
-    }
+    // public function initialize()
+    // {
+    // }
 }

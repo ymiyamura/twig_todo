@@ -1,0 +1,42 @@
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <li class="heading">{{ __('Actions') }}</li>
+        <li>{{ Html.link(__('Edit Todo'), {'action' : 'edit', 0 : todo.id})|raw }}</li>
+        <li>{{ Form.postLink(__('Delete Todo'), {'action' : 'delete', 0 : todo.id}, {'confirm' : __('Are you sure you want to delete # {0}?', todo.id)})|raw }}</li>
+        <li>{{ Html.link(__('List Todos'), {'action' : 'index'})|raw }}</li>
+        <li>{{ Html.link(__('New Todo'), {'action' : 'add'})|raw }}</li>
+    </ul>
+</nav>
+<div class="todos view large-9 medium-8 columns content">
+    <h3>{{ todo.title|h }}</h3>
+    <table class="vertical-table">
+        <tr>
+            <th>{{ __('Title') }}</th>
+            <td>{{ todo.title|h }}</td>
+        </tr>
+        <tr>
+            <th>{{ __('Id') }}</th>
+            <td>{{ Number.format(todo.id) }}</td>
+        </tr>
+        <tr>
+            <th>{{ __('Status') }}</th>
+            <td>{{ Number.format(todo.status) }}</td>
+        </tr>
+        <tr>
+            <th>{{ __('Done') }}</th>
+            <td>{{ todo.done|h }}</td>
+        </tr>
+        <tr>
+            <th>{{ __('Created') }}</th>
+            <td>{{ todo.created|h }}</td>
+        </tr>
+        <tr>
+            <th>{{ __('Modified') }}</th>
+            <td>{{ todo.modified|h }}</td>
+        </tr>
+    </table>
+    <div class="row">
+        <h4>{{ __('Descriptions') }}</h4>
+        {{ Text.autoParagraph(todo.descriptions|h)|raw }}
+    </div>
+</div>
